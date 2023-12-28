@@ -37,7 +37,7 @@ class UserSettingsPage extends ConsumerWidget {
                   onPressed: (context) {
                     googleAuth.user.when(data: (user) {
                       if (user != null) {
-                        AutoRouter.of(context).pushNamed('/account');
+                        AutoRouter.of(context).pushNamed('/login');
                       } else {
                         router.push(const LoginRoute());
                       }

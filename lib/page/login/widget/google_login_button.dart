@@ -14,7 +14,9 @@ class GoogleLogInButton extends ConsumerWidget {
       padding: const EdgeInsets.only(bottom: 16.0),
       child: OutlinedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.white),
+          textStyle: MaterialStateProperty.all(
+            AppTheme.light().textTheme.h30,
+          ),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(40),
@@ -45,10 +47,10 @@ class GoogleLogInButton extends ConsumerWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10),
-                child: Text(
-                  'ログイン',
-                  style: AppTheme.light().textTheme.h30,
-                ),
+                child: Text('ログイン',
+                    style: TextStyle(
+                      color: Colors.grey[700],
+                    )),
               )
             ],
           ),

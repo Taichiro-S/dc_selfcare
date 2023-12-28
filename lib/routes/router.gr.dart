@@ -33,10 +33,28 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const RootPage(),
       );
     },
+    SelfcareFormRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SelfcareFormPage(),
+      );
+    },
+    SelfcareRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SelfcarePage(),
+      );
+    },
     UserSettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const UserSettingsPage(),
+      );
+    },
+    UsersListRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const UsersListPage(),
       );
     },
   };
@@ -85,6 +103,34 @@ class RootRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [SelfcareFormPage]
+class SelfcareFormRoute extends PageRouteInfo<void> {
+  const SelfcareFormRoute({List<PageRouteInfo>? children})
+      : super(
+          SelfcareFormRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SelfcareFormRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SelfcarePage]
+class SelfcareRoute extends PageRouteInfo<void> {
+  const SelfcareRoute({List<PageRouteInfo>? children})
+      : super(
+          SelfcareRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SelfcareRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [UserSettingsPage]
 class UserSettingsRoute extends PageRouteInfo<void> {
   const UserSettingsRoute({List<PageRouteInfo>? children})
@@ -94,6 +140,20 @@ class UserSettingsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'UserSettingsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [UsersListPage]
+class UsersListRoute extends PageRouteInfo<void> {
+  const UsersListRoute({List<PageRouteInfo>? children})
+      : super(
+          UsersListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'UsersListRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
