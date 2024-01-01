@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dc_selfcare/enum/enum.dart';
+import 'package:dc_selfcare/page/account/account_page.dart';
 import 'package:dc_selfcare/page/login/login_page.dart';
 import 'package:dc_selfcare/page/login/provider/google_auth_provider.dart';
 import 'package:dc_selfcare/page/login/provider/user_role_provider.dart';
@@ -37,7 +38,7 @@ class RootPage extends ConsumerWidget {
                   routes: [SelfcareRoute(), UserSettingsRoute()],
                   items: [
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.self_improvement),
+                      icon: Icon(Icons.description),
                       label: 'セルフケア',
                     ),
                     BottomNavigationBarItem(
@@ -61,7 +62,7 @@ class RootPage extends ConsumerWidget {
                   ],
                 );
               } else {
-                return const LoginPage();
+                return const AccountPage();
               }
             },
             loading: () => const Center(child: CircleLoadingWidget()),

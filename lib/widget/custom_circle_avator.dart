@@ -30,7 +30,7 @@ class CustomCircleAvator extends StatelessWidget {
                   width: width,
                   height: height,
                   decoration: const BoxDecoration(
-                    color: Colors.red,
+                    color: Colors.grey,
                   ),
                 )),
                 errorWidget: (context, url, error) => const Icon(Icons.error),

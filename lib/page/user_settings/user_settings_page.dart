@@ -28,7 +28,7 @@ class UserSettingsPage extends ConsumerWidget {
                 leading: const Icon(Icons.privacy_tip_outlined),
                 title: const Text('プライバシーポリシー'),
                 onPressed: (context) {
-                  router.push(const PrivacyPolicyRoute());
+                  router.pushNamed('/privacy_policy');
                 },
               ),
               SettingsTile.navigation(
@@ -37,14 +37,14 @@ class UserSettingsPage extends ConsumerWidget {
                   onPressed: (context) {
                     googleAuth.user.when(data: (user) {
                       if (user != null) {
-                        AutoRouter.of(context).pushNamed('/login');
+                        router.pushNamed('/account');
                       } else {
-                        router.push(const LoginRoute());
+                        router.pushNamed('/login');
                       }
                     }, loading: () {
                       EasyLoading.show();
                     }, error: (error, stack) {
-                      Fluttertoast.showToast(msg: 'エラーが発生しました。再度お試しください。');
+                      Fluttertoast.showToast(msg: 'エラーが発生しました');
                     });
                   }),
             ],
